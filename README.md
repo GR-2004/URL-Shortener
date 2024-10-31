@@ -49,20 +49,20 @@ After starting the app, use a tool like Postman to interact with the API.
 
 ## API Endpoints
 1. **Generate Short URL**
-- Endpoint: /url/shorten
-- Method: POST
-- Body: {
-          "url": "https://example.com",
-          "customAlias": "optional-custom-alias"
-        }
-- Response: Returns the generated short URL
+   - Endpoint: /url/shorten
+   - Method: POST
+   - Body: {
+             "url": "https://example.com",
+             "customAlias": "optional-custom-alias"
+           }
+   - Response: Returns the generated short URL
 
 2. **Redirect Short URL**
-- Endpoint: /url/:shortUrl (This shortUrl is a value of id that you have received while generating short URL.)
-- Method: GET
-- Response: Redirects to the original URL if found, otherwise returns a 404 error.(try the full url on Browser.)
+   - Endpoint: /url/:shortUrl (This shortUrl is a value of id that you have received while generating short URL.)
+   - Method: GET
+   - Response: Redirects to the original URL if found, otherwise returns a 404 error.(try the full url on Browser.)
 
 3. **Get Statistics**
-- Endpoint: /url/stats/:shortUrl (This shortUrl is a value of id that you have received while generating short URL.)
-- Method: GET
-- Response: Returns the number of times a URL has been accessed and access timestamps.
+   - Endpoint: /url/stats/:shortUrl (This shortUrl is a value of id that you have received while generating short URL.)
+   - Method: GET
+   - Response: Returns the number of times a URL has been accessed and access timestamps.
